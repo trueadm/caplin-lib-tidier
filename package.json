@@ -1,0 +1,26 @@
+{
+  "name": "caplin-lib-tidier",
+  "version": "0.0.1",
+  "description": "Tidies up a legacy Caplin lib to the new structure",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trueadm/caplin-lib-tidier.git"
+  },
+  "author": "Dominic Gannaway",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/trueadm/caplin-lib-tidier/issues"
+  },
+  "homepage": "https://github.com/trueadm/caplin-lib-tidier#readme",
+  "dependencies": {
+    "chalk": "^1.1.3",
+    "glob": "^7.0.3",
+    "mv": "^2.1.1",
+    "path": "^0.12.7",
+    "rimraf": "^2.5.2"
+  }
+}
