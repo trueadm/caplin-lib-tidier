@@ -8,8 +8,17 @@ const fs = require('fs');
 const chalk = require('chalk');
 
 const libsWorkingDir = process.cwd();
-const requireMap = {};
+const requireMappings = {};
 
+// Generate mappings for all logical .js files in this working dir
+glob.sync(libsWorkingDir + '/**/*.js').map(srcPath => {
+	requireMappings[srcPath.replace(libsWorkingDir + '/', '').replace('.js', '')] = '';
+});
+
+console.log(requireMappings);
+return;
+// Now we go through each package and re-structure the package
+// we also go through each src file and re-map the require path if needed
 fs.readdirSync(libsWorkingDir).map(workingDir => new Promise((resolve, reject) => {
 	if (!fs.lstatSync(workingDir).isDirectory()) {
 		return;
